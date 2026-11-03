@@ -1,6 +1,9 @@
-# Portfolio — Tone & Manner
+# Portfolio
 
-5つのトンマナで作ったポートフォリオサイトです。
+- トップ：業種・カラー別の5パターン（`build_pro.py`）
+- `v1/`：最初に作ったトンマナ5パターン（`build.py`）
+
+### v1 のパターン
 
 | No | パターン | 印象 |
 |---|---|---|
@@ -12,8 +15,8 @@
 
 ## 編集方法
 1. `content.json` の名前・自己紹介・実績・連絡先を書き換える
-2. `python3 build.py` を実行（全パターンのHTMLが再生成されます）
-3. トンマナ（色・フォント・コピー）は `build.py` の `THEMES` で変更できます
+2. `python3 build_pro.py`（トップ）と `python3 build.py`（v1）を実行
+3. トンマナ（色・フォント・コピー）は 各ビルドスクリプトの `THEMES` で変更できます
 
 ## 公開
 GitHub Pages（Settings → Pages → Branch: main / root）で公開できます。

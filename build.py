@@ -7,6 +7,7 @@ from html import escape as e
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+OUT = ROOT / "v1"
 C = json.loads((ROOT / "content.json").read_text(encoding="utf-8"))
 
 BASE_CSS = """
@@ -298,9 +299,10 @@ q{{display:block;margin-top:4px;font-weight:700}}
 
 
 def main():
-    (ROOT / "index.html").write_text(index_html(), encoding="utf-8")
+    OUT.mkdir(exist_ok=True)
+    (OUT / "index.html").write_text(index_html(), encoding="utf-8")
     for t in THEMES:
-        d = ROOT / t["id"]
+        d = OUT / t["id"]
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(portfolio_html(t), encoding="utf-8")
         (d / "style.css").write_text(BASE_CSS + t["css"], encoding="utf-8")

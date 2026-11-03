@@ -1,4 +1,4 @@
-"""企業サイト水準の5パターン（pro/）を生成する。
+"""企業サイト水準の5パターン（サイトのトップ）を生成する。
 
 使い方: python3 build_pro.py
 """
@@ -7,7 +7,7 @@ from html import escape as e
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-OUT = ROOT / "pro"
+OUT = ROOT
 C = json.loads((ROOT / "content.json").read_text(encoding="utf-8"))
 
 BASE_CSS = """
@@ -488,11 +488,11 @@ main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap
 .ind{{font-weight:700;font-size:13px}}.ref{{font-size:12px;color:#6e6e73;margin-top:-10px}}
 .kw span{{display:inline-block;background:#f5f5f7;border-radius:999px;padding:2px 10px;margin:0 6px 6px 0;font-size:12px}}
 .sw{{display:flex;gap:6px}}.chip{{width:32px;height:32px;border-radius:8px;border:1px solid rgba(0,0,0,.1)}}
-.meta{{font-size:12px;color:#6e6e73}}.go{{margin-top:auto;font-weight:700;color:#0066cc}}
+.meta{{font-size:12px;color:#6e6e73}}footer{{max-width:1240px;margin:0 auto;padding:0 32px 72px;font-size:14px;color:#6e6e73}}footer a:hover{{color:#0066cc}}.go{{margin-top:auto;font-weight:700;color:#0066cc}}
 @media (max-width:640px){{header,main{{padding-left:16px;padding-right:16px}}main{{grid-template-columns:1fr}}}}
 </style></head><body>
 <header><small>DESIGN PATTERNS</small><h1>5業種・5カラーのデザインパターン</h1><p>業種や色の系統がまったく違う5つのサイトを、同じ内容で設計しました。ご依頼のブランドに合わせて、どのテイストでも制作できます。</p></header>
-<main>{cards}</main></body></html>
+<main>{cards}</main><footer><a href="v1/">トンマナ違いの5パターン（v1）も見る →</a></footer></body></html>
 """
 
 
@@ -504,7 +504,13 @@ def main():
         d.mkdir(exist_ok=True)
         (d / "index.html").write_text(page(t), encoding="utf-8")
         (d / "style.css").write_text(BASE_CSS + t["css"], encoding="utf-8")
-    print("built", len(THEMES), "pro patterns")
+    # 以前の /pro/ のURLを共有済みでも開けるよう、トップへ転送する
+    for sub in [""] + [t["id"] + "/" for t in THEMES]:
+        d = ROOT / "pro" / sub
+        d.mkdir(parents=True, exist_ok=True)
+        to = "../" * (sub.count("/") + 1) + sub
+        (d / "index.html").write_text(f'<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url={to}"><link rel="canonical" href="{to}"><a href="{to}">移動しました</a>', encoding="utf-8")
+    print("built", len(THEMES), "patterns")
 
 
 if __name__ == "__main__":

@@ -1,71 +1,43 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Portfolio Tone &amp; Manner</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<title>Portfolio Design Patterns</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Noto Sans JP',sans-serif;background:#f2f2f0;color:#1a1a1a;line-height:1.7}
-header{max-width:1180px;margin:0 auto;padding:64px 24px 32px}
-header h1{font-size:clamp(28px,4vw,44px)}
-header p{color:#666;margin-top:8px}
-main{max-width:1180px;margin:0 auto;padding:0 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
-.tm{background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.06)}
-.tm-head{padding:28px 24px}
-.tm-head .no{font-size:13px;opacity:.7}
-.tm-head h2{font-size:26px;line-height:1.3}
-.tm-head p{font-size:14px;opacity:.8}
-.tm-body{padding:24px;display:flex;flex-direction:column;gap:16px;flex:1}
-.concept{font-size:14px}
-dl{display:grid;grid-template-columns:84px 1fr;gap:10px 12px;font-size:13px}
-dt{color:#888;font-weight:700}
-.kw span{display:inline-block;background:#f2f2f0;border-radius:4px;padding:0 8px;margin:0 4px 4px 0}
-.sw{list-style:none;display:grid;gap:4px}
-.sw li{display:flex;align-items:center;gap:8px}
-.chip{width:18px;height:18px;border-radius:4px;border:1px solid rgba(0,0,0,.12)}
-.sw code{color:#888;font-size:12px;margin-left:auto}
-q{display:block;margin-top:4px;font-weight:700}
-.btn{margin-top:auto;display:block;text-align:center;background:#1a1a1a;color:#fff;text-decoration:none;padding:12px;border-radius:8px;font-weight:700}
+*{box-sizing:border-box;margin:0;padding:0}a{color:inherit;text-decoration:none}
+body{font-family:'Inter','Noto Sans JP',sans-serif;background:#f5f5f7;color:#1d1d1f;line-height:1.7}
+header,main{max-width:1240px;margin:0 auto;padding:0 32px}
+header{padding-top:72px;padding-bottom:40px}header small{letter-spacing:.2em;color:#6e6e73;font-weight:700}
+header h1{font-size:clamp(30px,4vw,48px);margin:8px 0}header p{color:#6e6e73}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px;padding-bottom:96px}
+.tm{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.tm:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.tm-head{padding:32px 28px;min-height:160px}.tm-head span{font-size:12px;opacity:.7}.tm-head h2{font-size:28px;line-height:1.2;margin-top:24px}.tm-head p{opacity:.8;font-size:14px}
+.tm-body{padding:24px 28px 28px;display:flex;flex-direction:column;gap:14px;flex:1;font-size:14px}
+.ind{font-weight:700;font-size:13px}.ref{font-size:12px;color:#6e6e73;margin-top:-10px}
+.kw span{display:inline-block;background:#f5f5f7;border-radius:999px;padding:2px 10px;margin:0 6px 6px 0;font-size:12px}
+.sw{display:flex;gap:6px}.chip{width:32px;height:32px;border-radius:8px;border:1px solid rgba(0,0,0,.1)}
+.meta{font-size:12px;color:#6e6e73}footer{max-width:1240px;margin:0 auto;padding:0 32px 72px;font-size:14px;color:#6e6e73}footer a:hover{color:#0066cc}.go{margin-top:auto;font-weight:700;color:#0066cc}
 @media (max-width:640px){header,main{padding-left:16px;padding-right:16px}main{grid-template-columns:1fr}}
 </style></head><body>
-<header><h1>Portfolio — Tone &amp; Manner</h1><p>5つのトンマナで作ったポートフォリオ。気に入ったパターンを選んでください。</p></header>
-<main><article class="tm">
-<div class="tm-head" style="background:#111111;color:#FFFFFF">
-<span class="no">01</span><h2>Minimal Mono</h2><p>ミニマル・モノトーン</p></div>
-<div class="tm-body"><p class="concept">余白とタイポグラフィだけで語る。情報を整理できる人、という信頼感を出す。</p>
-<dl><dt>キーワード</dt><dd class="kw"><span>#知的</span><span>#誠実</span><span>#余白</span><span>#シンプル</span></dd>
-<dt>カラー</dt><dd><ul class="sw"><li><span class="chip" style="background:#111111"></span><b>Ink</b><code>#111111</code></li><li><span class="chip" style="background:#FFFFFF"></span><b>Paper</b><code>#FFFFFF</code></li><li><span class="chip" style="background:#E5E5E5"></span><b>Line</b><code>#E5E5E5</code></li><li><span class="chip" style="background:#FF3B00"></span><b>Accent</b><code>#FF3B00</code></li></ul></dd>
-<dt>フォント</dt><dd>見出し：Inter<br>本文：Noto Sans JP</dd>
-<dt>文章トーン</dt><dd>言い切り・短文。装飾語を使わない。<br><q>言葉を、整える。</q></dd></dl>
-<a class="btn" href="01-minimal/">このパターンを見る →</a></div></article><article class="tm">
-<div class="tm-head" style="background:#F5EFE6;color:#5C4A3A">
-<span class="no">02</span><h2>Warm Natural</h2><p>ナチュラル・やさしさ</p></div>
-<div class="tm-body"><p class="concept">生成りとくすみカラーで、相談しやすい温度感。人柄で選ばれたいとき向け。</p>
-<dl><dt>キーワード</dt><dd class="kw"><span>#親しみ</span><span>#安心</span><span>#丁寧</span><span>#あたたかい</span></dd>
-<dt>カラー</dt><dd><ul class="sw"><li><span class="chip" style="background:#F5EFE6"></span><b>Cream</b><code>#F5EFE6</code></li><li><span class="chip" style="background:#5C4A3A"></span><b>Cocoa</b><code>#5C4A3A</code></li><li><span class="chip" style="background:#C97B4A"></span><b>Terracotta</b><code>#C97B4A</code></li><li><span class="chip" style="background:#8A9A7B"></span><b>Sage</b><code>#8A9A7B</code></li></ul></dd>
-<dt>フォント</dt><dd>見出し：Zen Maru Gothic<br>本文：Zen Maru Gothic</dd>
-<dt>文章トーン</dt><dd>です・ます調。語りかけるように、やわらかく。<br><q>あなたの「伝えたい」に、そっと寄り添います。</q></dd></dl>
-<a class="btn" href="02-natural/">このパターンを見る →</a></div></article><article class="tm">
-<div class="tm-head" style="background:#FFF4D6;color:#1A1A1A">
-<span class="no">03</span><h2>Bold Pop</h2><p>ポップ・元気</p></div>
-<div class="tm-body"><p class="concept">太い線とビビッドカラーで、一度見たら忘れない。SNS・エンタメ系に強い印象を。</p>
-<dl><dt>キーワード</dt><dd class="kw"><span>#元気</span><span>#インパクト</span><span>#遊び心</span><span>#ワクワク</span></dd>
-<dt>カラー</dt><dd><ul class="sw"><li><span class="chip" style="background:#FFF4D6"></span><b>Cream</b><code>#FFF4D6</code></li><li><span class="chip" style="background:#1A1A1A"></span><b>Black</b><code>#1A1A1A</code></li><li><span class="chip" style="background:#FF5CA8"></span><b>Pink</b><code>#FF5CA8</code></li><li><span class="chip" style="background:#2D6BFF"></span><b>Blue</b><code>#2D6BFF</code></li><li><span class="chip" style="background:#FFD23F"></span><b>Yellow</b><code>#FFD23F</code></li></ul></dd>
-<dt>フォント</dt><dd>見出し：Dela Gothic One<br>本文：M PLUS Rounded 1c</dd>
-<dt>文章トーン</dt><dd>テンポよく！ 体言止めと感嘆符で勢いを出す。<br><q>おもしろいを、言葉にする！</q></dd></dl>
-<a class="btn" href="03-pop/">このパターンを見る →</a></div></article><article class="tm">
-<div class="tm-head" style="background:#0B0F14;color:#E6EDF3">
-<span class="no">04</span><h2>Dark Tech</h2><p>ダーク・テック</p></div>
-<div class="tm-body"><p class="concept">ターミナル風のダーク基調。AI・自動化に強い専門性をひと目で伝える。</p>
-<dl><dt>キーワード</dt><dd class="kw"><span>#先進的</span><span>#専門性</span><span>#ロジカル</span><span>#クール</span></dd>
-<dt>カラー</dt><dd><ul class="sw"><li><span class="chip" style="background:#0B0F14"></span><b>Void</b><code>#0B0F14</code></li><li><span class="chip" style="background:#E6EDF3"></span><b>Text</b><code>#E6EDF3</code></li><li><span class="chip" style="background:#39FF88"></span><b>Neon</b><code>#39FF88</code></li><li><span class="chip" style="background:#7AA2FF"></span><b>Signal</b><code>#7AA2FF</code></li><li><span class="chip" style="background:#151B23"></span><b>Panel</b><code>#151B23</code></li></ul></dd>
-<dt>フォント</dt><dd>見出し：JetBrains Mono<br>本文：Noto Sans JP</dd>
-<dt>文章トーン</dt><dd>簡潔・ロジカル。数字と事実で語る。<br><q>AI × 言葉で、仕組みをつくる。</q></dd></dl>
-<a class="btn" href="04-tech/">このパターンを見る →</a></div></article><article class="tm">
-<div class="tm-head" style="background:#F7F5F0;color:#1D2A44">
-<span class="no">05</span><h2>Elegant Editorial</h2><p>エディトリアル・上品</p></div>
-<div class="tm-body"><p class="concept">雑誌の誌面のような明朝体とネイビー×ゴールド。上質さと編集力を印象づける。</p>
-<dl><dt>キーワード</dt><dd class="kw"><span>#上品</span><span>#編集力</span><span>#大人</span><span>#物語性</span></dd>
-<dt>カラー</dt><dd><ul class="sw"><li><span class="chip" style="background:#F7F5F0"></span><b>Ivory</b><code>#F7F5F0</code></li><li><span class="chip" style="background:#1D2A44"></span><b>Navy</b><code>#1D2A44</code></li><li><span class="chip" style="background:#B08D57"></span><b>Gold</b><code>#B08D57</code></li><li><span class="chip" style="background:#8C8578"></span><b>Stone</b><code>#8C8578</code></li></ul></dd>
-<dt>フォント</dt><dd>見出し：Shippori Mincho<br>本文：Shippori Mincho</dd>
-<dt>文章トーン</dt><dd>である調、または落ち着いた敬体。余韻を残す一文。<br><q>一行に、物語を。</q></dd></dl>
-<a class="btn" href="05-editorial/">このパターンを見る →</a></div></article></main></body></html>
+<header><small>DESIGN PATTERNS</small><h1>5業種・5カラーのデザインパターン</h1><p>業種や色の系統がまったく違う5つのサイトを、同じ内容で設計しました。ご依頼のブランドに合わせて、どのテイストでも制作できます。</p></header>
+<main><a class="tm" href="01-precision/">
+<div class="tm-head" style="background:#000000;color:#FFFFFF"><span>01</span><h2>Precision Black</h2><p>精密・プレミアム</p></div>
+<div class="tm-body"><p class="ind">想定業種：テック・家電・高級ブランド</p><p class="ref">参考にした雰囲気：大手エレクトロニクスメーカーの製品サイト</p><p>黒を基調に、光と余白で「精度の高さ」を見せる。一流メーカーのような静かな自信。</p>
+<div class="kw"><span>#プレミアム</span><span>#精密</span><span>#高級感</span><span>#静けさ</span></div><div class="sw"><span class="chip" style="background:#000000" title="Black #000000"></span><span class="chip" style="background:#1C1C1E" title="Graphite #1C1C1E"></span><span class="chip" style="background:#FFFFFF" title="White #FFFFFF"></span><span class="chip" style="background:#C9A96E" title="Champagne #C9A96E"></span></div><p class="meta">#000000 / #1C1C1E / #FFFFFF / #C9A96E<br>見出し Inter ／ 本文 Noto Sans JP</p>
+<span class="go">サイトを見る →</span></div></a><a class="tm" href="02-trust/">
+<div class="tm-head" style="background:#0B5A45;color:#FFFFFF"><span>02</span><h2>Trust Green</h2><p>信頼・誠実</p></div>
+<div class="tm-body"><p class="ind">想定業種：金融・保険・士業・不動産</p><p class="ref">参考にした雰囲気：メガバンクのコーポレートサイト</p><p>深いグリーンと整った情報設計で「この人なら任せられる」という安心感をつくる。</p>
+<div class="kw"><span>#信頼</span><span>#誠実</span><span>#わかりやすさ</span><span>#安定</span></div><div class="sw"><span class="chip" style="background:#0B5A45" title="Deep Green #0B5A45"></span><span class="chip" style="background:#9BC31C" title="Fresh Green #9BC31C"></span><span class="chip" style="background:#EEF5F1" title="Mint #EEF5F1"></span><span class="chip" style="background:#222222" title="Ink #222222"></span></div><p class="meta">#0B5A45 / #9BC31C / #EEF5F1 / #222222<br>見出し Noto Sans JP ／ 本文 Noto Sans JP</p>
+<span class="go">サイトを見る →</span></div></a><a class="tm" href="03-vivid/">
+<div class="tm-head" style="background:#FF5A36;color:#FFFFFF"><span>03</span><h2>Vivid Coral</h2><p>元気・親しみ</p></div>
+<div class="tm-body"><p class="ind">想定業種：スタートアップ・飲食・ライフスタイル</p><p class="ref">参考にした雰囲気：勢いのあるスタートアップやD2Cブランドのサイト</p><p>コーラルとサニーイエローの明るい配色で、前向きなエネルギーと親しみやすさを届ける。</p>
+<div class="kw"><span>#元気</span><span>#親しみ</span><span>#前向き</span><span>#スピード感</span></div><div class="sw"><span class="chip" style="background:#FF5A36" title="Coral #FF5A36"></span><span class="chip" style="background:#FFC531" title="Sunny #FFC531"></span><span class="chip" style="background:#FFF3EC" title="Peach #FFF3EC"></span><span class="chip" style="background:#1F1A17" title="Cocoa #1F1A17"></span></div><p class="meta">#FF5A36 / #FFC531 / #FFF3EC / #1F1A17<br>見出し Inter ／ 本文 Noto Sans JP</p>
+<span class="go">サイトを見る →</span></div></a><a class="tm" href="04-consulting/">
+<div class="tm-head" style="background:#051C2C;color:#FFFFFF"><span>04</span><h2>Consulting Navy</h2><p>知性・戦略</p></div>
+<div class="tm-body"><p class="ind">想定業種：コンサル・BtoB・IT企業</p><p class="ref">参考にした雰囲気：外資系コンサルティングファームのサイト</p><p>ネイビーと明朝の見出しで、論理と洞察を語るプロフェッショナルの佇まいを。</p>
+<div class="kw"><span>#知性</span><span>#戦略的</span><span>#権威</span><span>#洞察</span></div><div class="sw"><span class="chip" style="background:#051C2C" title="Navy #051C2C"></span><span class="chip" style="background:#2251FF" title="Electric #2251FF"></span><span class="chip" style="background:#00A9F4" title="Cyan #00A9F4"></span><span class="chip" style="background:#FFFFFF" title="Paper #FFFFFF"></span></div><p class="meta">#051C2C / #2251FF / #00A9F4 / #FFFFFF<br>見出し Noto Serif JP ／ 本文 Noto Sans JP</p>
+<span class="go">サイトを見る →</span></div></a><a class="tm" href="05-beauty/">
+<div class="tm-head" style="background:#F3DCE0;color:#3D2A33"><span>05</span><h2>Blush Beauty</h2><p>やわらか・上品</p></div>
+<div class="tm-body"><p class="ind">想定業種：美容・サロン・ウェルネス・ファッション</p><p class="ref">参考にした雰囲気：コスメブランドやビューティーサロンのサイト</p><p>ブラッシュピンクとローズ、明朝体の繊細さで、女性向けブランドにふさわしい上品なやわらかさを。</p>
+<div class="kw"><span>#上品</span><span>#やわらか</span><span>#女性らしさ</span><span>#透明感</span></div><div class="sw"><span class="chip" style="background:#F3DCE0" title="Blush #F3DCE0"></span><span class="chip" style="background:#C2577A" title="Rose #C2577A"></span><span class="chip" style="background:#D9B99B" title="Champagne #D9B99B"></span><span class="chip" style="background:#3D2A33" title="Plum #3D2A33"></span></div><p class="meta">#F3DCE0 / #C2577A / #D9B99B / #3D2A33<br>見出し Shippori Mincho ／ 本文 Noto Sans JP</p>
+<span class="go">サイトを見る →</span></div></a></main><footer><a href="v1/">トンマナ違いの5パターン（v1）も見る →</a></footer></body></html>
